@@ -20,7 +20,8 @@
     "next": "latest",
     "next-auth": "^4.3.4",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-tracked": "^1.7.9"
   },
   "devDependencies": {
     "@types/node": "latest",
