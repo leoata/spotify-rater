@@ -7,13 +7,42 @@ import {CacheProvider, EmotionCache} from '@emotion/react';
 import theme from '../theme';
 import createEmotionCache from '../createEmotionCache';
 import "../styles/globals.css";
-import {SessionProvider} from "next-auth/react";
+import {SessionProvider, useSession} from "next-auth/react";
 import {GlobalStateProvider} from '../store';
+import Typography from "@mui/material/Typography";
+import {Box, ButtonBase, Container} from "@mui/material";
+import {HouseOutlined} from "@mui/icons-material";
+import Link from 'next/link';
+import Unauthorized from "../components/Unauthorized";
+import {NextComponentType} from "next";
+import {NextRouter} from "next/router";
+import {Suspense} from "preact/compat";
+import Loading from "../components/Loading";
+import {useEffect} from "react";
+import IconButton from "../components/IconButton";
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 interface MyAppProps extends AppProps {
     emotionCache?: EmotionCache;
+}
+
+const AppContent = ({
+                        Component,
+                        pageProps,
+                        router
+                    }: { Component: NextComponentType, pageProps: any, router: NextRouter }) => {
+    const {data: session, status} = useSession();
+
+    if (status === 'loading') {
+        return <Loading/>;
+    }
+    if (!session && router.route !== '/') {
+        return <Unauthorized/>;
+    }
+    return <Component {...pageProps} />;
+
 }
 
 export default function MyApp({
@@ -31,9 +60,12 @@ export default function MyApp({
                         <meta name="viewport" content="initial-scale=1, width=device-width"/>
                     </Head>
                     <ThemeProvider theme={theme}>
-                        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                         <CssBaseline/>
-                        <Component {...pageProps} />
+                        <IconButton sx={{color: "white", top: "16px", left: "16px", position: "absolute"}} icon={<HouseOutlined/>} href="/"/>
+                        <Container maxWidth="lg">
+                            <AppContent Component={Component} pageProps={pageProps} router={router}/>
+                        </Container>
+
                     </ThemeProvider>
                 </CacheProvider>
             </GlobalStateProvider>

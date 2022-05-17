@@ -25,6 +25,11 @@ const theme = createTheme({
       fontFamily: "Spotify Circular Bold",
       color: "rgb(30, 215, 96)"
     },
+    h3: {
+      fontSize: '1.2rem',
+      fontFamily: "Spotify Circular Bold",
+      color: "rgb(30, 215, 96)"
+    },
     caption: {
       fontSize: '1rem',
       fontFamily: "Spotify Circular Book",
@@ -51,7 +56,11 @@ const theme = createTheme({
           '&:hover': {
             backgroundColor: "rgb(45, 230, 111)",
           },
-        }
+          disabled: {
+            backgroundColor: "#333",
+            color: "#111",
+          },
+        },
       }
     }
   }

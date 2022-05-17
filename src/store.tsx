@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import {createContainer} from "react-tracked";
+import {SpotifyPlaylist} from "./pages/select_playlist";
 
 interface GlobalState {
-    position: number,
+    selectedPlaylist?: SpotifyPlaylist | null,
 }
-
 const initialState: GlobalState = {
-    position: 0,
+    selectedPlaylist: null,
 }
 
 
