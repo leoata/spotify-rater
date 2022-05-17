@@ -21,7 +21,10 @@ const SongPopularityStat = ({rating}: { rating: PlaylistRating }) => {
                sx={{position: "relative",
                    height: "30rem", width: "30rem",
                    '@media (max-width: 600px)': {
-                       height: "18rem", width: "13rem"
+                        width: "13rem"
+                   },
+                   '@media (max-height: 600px)': {
+                       height: "18rem"
                    },
                    borderRadius: "20px", padding: "1rem", backgroundColor: "rgb(34, 35, 38)"}}>
             {element}
