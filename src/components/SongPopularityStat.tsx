@@ -18,7 +18,12 @@ const SongPopularityStat = ({rating}: { rating: PlaylistRating }) => {
 
     return (
         <Paper elevation={10}
-               sx={{position: "relative", height: "35rem", width: "30rem", borderRadius: "20px", padding: "1rem", backgroundColor: "rgb(34, 35, 38)"}}>
+               sx={{position: "relative",
+                   height: "30rem", width: "30rem",
+                   '@media (max-width: 600px)': {
+                       height: "18rem", width: "13rem"
+                   },
+                   borderRadius: "20px", padding: "1rem", backgroundColor: "rgb(34, 35, 38)"}}>
             {element}
             {card !== cardOrder.length - 1 &&
             <IconButton href={"#"}

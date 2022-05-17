@@ -18,22 +18,46 @@ const theme = createTheme({
     h1: {
       fontSize: '2.5rem',
       fontFamily: "Spotify Circular Black",
-      color: "rgb(30, 215, 96)"
+      color: "rgb(30, 215, 96)",
+      '@media (min-width:600px)': {
+        fontSize: '2.5rem',
+      },
+      '@media (max-width:600px)': {
+        fontSize: '1rem',
+      },
     },
     h2: {
       fontSize: '2rem',
       fontFamily: "Spotify Circular Bold",
-      color: "rgb(30, 215, 96)"
+      color: "rgb(30, 215, 96)",
+      '@media (min-width:600px)': {
+        fontSize: '2rem',
+      },
+      '@media (max-width:600px)': {
+        fontSize: '0.75rem',
+      },
     },
     h3: {
       fontSize: '1.2rem',
       fontFamily: "Spotify Circular Bold",
-      color: "rgb(30, 215, 96)"
+      color: "rgb(30, 215, 96)",
+      '@media (min-width:600px)': {
+        fontSize: '1.2rem',
+      },
+      '@media (max-width:600px)': {
+        fontSize: '0.8rem',
+      },
     },
     caption: {
       fontSize: '1rem',
       fontFamily: "Spotify Circular Book",
-      color: "rgb(30, 215, 96)"
+      color: "rgb(30, 215, 96)",
+      '@media (min-width:600px)': {
+        fontSize: '1rem',
+      },
+      '@media (max-width:600px)': {
+        fontSize: '0.75rem',
+      },
     },
   },
   components: {
@@ -62,7 +86,7 @@ const theme = createTheme({
           },
         },
       }
-    }
+    },
   }
 });
 

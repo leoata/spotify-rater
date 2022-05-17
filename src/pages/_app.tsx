@@ -57,7 +57,7 @@ export default function MyApp({
                     </Head>
                     <ThemeProvider theme={theme}>
                         <CssBaseline/>
-                        <IconButton sx={{color: "white", top: "16px", left: "16px", position: "absolute"}} icon={<HouseOutlined/>} href="/"/>
+                        <IconButton sx={{color: "white", top: "16px", left: "16px", position: "absolute", width: "16px", height: "16px"}} icon={<HouseOutlined/>} href="/"/>
                         <Container maxWidth="lg">
                             <AppContent Component={Component} pageProps={pageProps} router={router}/>
                         </Container>
