@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {createContainer} from "react-tracked";
-import {SpotifyPlaylist} from "./pages/select_playlist";
+import {SpotifyPlaylist} from "./util/spotifyTypes";
 
 interface GlobalState {
     selectedPlaylist?: SpotifyPlaylist | null,

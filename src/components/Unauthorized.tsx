@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button, Typography} from "@mui/material";
-import Link from "next/link";
 import {signIn} from "next-auth/react";
 
 const Unauthorized = () => {

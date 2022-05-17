@@ -1,7 +1,6 @@
 import NextAuth, {Account, Profile, Session, User} from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify"
 import {JWT} from "next-auth/jwt";
-import {ISODateString} from "next-auth/core/types";
 import {CredentialInput} from "next-auth/providers";
 
 export default NextAuth({

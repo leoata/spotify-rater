@@ -1,6 +1,4 @@
-import {SpotifyPlaylist, SpotifyTrack} from "../util/spotifyTypes";
-import {getBaseUrl} from "./envUtil";
-import spotifyFetcher from "./fetchUtil";
+import {SpotifyPlaylist, SpotifyTrack} from "./spotifyTypes";
 
 export type SongResponse = {
     track: SpotifyTrack;

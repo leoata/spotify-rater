@@ -1,11 +1,10 @@
 import React, {cloneElement, useEffect} from 'react';
 import {PlaylistRating} from "../util/playlistRatingUtil";
-import {ButtonBase, Paper, Typography} from "@mui/material";
+import {Paper} from "@mui/material";
 import TrendingnessCard from "./StatisticCards/TrendingnessCard";
 import {
      KeyboardArrowRightRounded, KeyboardArrowLeftRounded
 } from "@mui/icons-material";
-import Link from "next/link";
 import IconButton from "./IconButton";
 import SongLengthCard from "./StatisticCards/SongLengthCard";
 

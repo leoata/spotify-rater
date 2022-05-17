@@ -1,6 +1,5 @@
 import React, {ReactElement} from 'react';
 import {ButtonBase, SxProps, Theme} from "@mui/material";
-import {KeyboardArrowRightRounded, SvgIconComponent} from "@mui/icons-material";
 import Link from "next/link";
 
 const IconButton = ({sx, icon, href, onClick}:

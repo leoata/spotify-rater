@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Paper, Typography} from "@mui/material";
+import {Button} from "@mui/material";
 import {useGlobalState} from "../store";
 import {useRouter} from "next/router";
 import useSwr from "swr";

@@ -1,13 +1,10 @@
 import React, {useEffect} from 'react';
-import useSwr from 'swr';
-import {signIn, useSession} from "next-auth/react";
-import Unauthorized from "../components/Unauthorized";
+import {useSession} from "next-auth/react";
 import {Button, Container, Paper, Typography} from "@mui/material";
 import Image from "next/image";
 import {useRouter} from "next/router";
 import {useGlobalState} from "../store";
 import spotifyFetcher from "../util/fetchUtil";
-import {signin} from "next-auth/core/routes";
 import {SpotifyPlaylist} from "../util/spotifyTypes";
 
 

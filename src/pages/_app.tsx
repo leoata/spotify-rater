@@ -9,16 +9,12 @@ import createEmotionCache from '../createEmotionCache';
 import "../styles/globals.css";
 import {SessionProvider, useSession} from "next-auth/react";
 import {GlobalStateProvider} from '../store';
-import Typography from "@mui/material/Typography";
-import {Box, ButtonBase, Container} from "@mui/material";
+import {Container} from "@mui/material";
 import {HouseOutlined} from "@mui/icons-material";
-import Link from 'next/link';
 import Unauthorized from "../components/Unauthorized";
 import {NextComponentType} from "next";
 import {NextRouter} from "next/router";
-import {Suspense} from "preact/compat";
 import Loading from "../components/Loading";
-import {useEffect} from "react";
 import IconButton from "../components/IconButton";
 
 // Client-side cache, shared for the whole session of the user in the browser.

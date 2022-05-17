@@ -2,12 +2,9 @@ import * as React from 'react';
 import type {NextPage} from 'next';
 import Typography from '@mui/material/Typography';
 import {signIn, signOut, useSession} from "next-auth/react";
-import {Button, ButtonBase, Container, IconButton} from "@mui/material";
-import {HomeMaxOutlined, HouseOutlined} from "@mui/icons-material";
-import Box from "@mui/material/Box";
+import {Button} from "@mui/material";
 import {useRouter} from "next/router";
 import Link from "next/link";
-import {signout} from "next-auth/core/routes";
 
 type AppStage = 'start' | 'selectPlaylist' | 'loadingResults' | 'results' | 'error';
 const Home: NextPage = () => {
