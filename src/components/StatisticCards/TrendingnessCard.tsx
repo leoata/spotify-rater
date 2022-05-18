@@ -16,14 +16,14 @@ const TrendingnessCard = ({rating}: { rating: PlaylistRating }) => {
             </Typography>
             <Typography variant="h2" component={"h2"} sx={{color: "white"}}>
                 {mostPopular.track.name} by {mostPopular.track.artists[0].name}<br/>
-                {mostPopular.track.popularity}
+                {mostPopular.track.popularity}/100
             </Typography>
             <Typography variant="h1" component={"h1"}>
                 Your least trending song:
             </Typography>
             <Typography variant="h2" component={"h2"} sx={{color: "white"}}>
                 {leastPopular.track.name} by {leastPopular.track.artists[0].name}<br/>
-                {leastPopular.track.popularity}
+                {leastPopular.track.popularity}/100
             </Typography>
             <Typography variant="h1" component={"h1"}>
                 Overall, your playlist is trending
