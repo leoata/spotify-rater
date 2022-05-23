@@ -23,6 +23,7 @@ const SongPopularityStat = ({rating}: { rating: PlaylistRating }) => {
                    '@media (max-width: 600px)': {
                         width: "13rem", height: "18rem"
                    },
+                   overflow: "scroll",
                    borderRadius: "20px", padding: "1rem", backgroundColor: "rgb(34, 35, 38)"}}>
             {element}
             {card !== cardOrder.length - 1 &&
