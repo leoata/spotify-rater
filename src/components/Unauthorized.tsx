@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button, Typography} from "@mui/material";
-import {signIn} from "next-auth/react";
+import {signIn, signOut} from "next-auth/react";
 
 const Unauthorized = () => {
+    useEffect(() => {
+        signOut()
+    }, []);
     return (
         <div className={"center"}>
             <Typography variant={"h1"} component={"h1"}>

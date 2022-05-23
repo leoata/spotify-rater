@@ -7,7 +7,7 @@ import {CacheProvider, EmotionCache} from '@emotion/react';
 import theme from '../theme';
 import createEmotionCache from '../createEmotionCache';
 import "../styles/globals.css";
-import {SessionProvider, useSession} from "next-auth/react";
+import {SessionProvider, signOut, useSession} from "next-auth/react";
 import {GlobalStateProvider} from '../store';
 import {Container} from "@mui/material";
 import {HouseOutlined} from "@mui/icons-material";
@@ -34,7 +34,7 @@ const AppContent = ({
     if (status === 'loading') {
         return <Loading/>;
     }
-    if (!session && router.route !== '/') {
+    if ((!session || !session.id) && router.route !== '/') {
         return <Unauthorized/>;
     }
     return <Component {...pageProps} />;
