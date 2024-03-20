@@ -18,11 +18,11 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "next": "latest",
-    "next-auth": "^4.3.4",
+    "next-auth": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-tracked": "^1.7.9",
-    "swr": "^1.3.0"
+    "react-tracked": "latest",
+    "swr": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
