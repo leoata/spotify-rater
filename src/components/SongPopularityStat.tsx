@@ -19,10 +19,8 @@ const SongPopularityStat = ({rating}: { rating: PlaylistRating }) => {
     return (
         <Paper elevation={10}
                sx={{position: "relative",
-                   height: "30rem", width: "30rem",
-                   '@media (max-width: 600px)': {
-                        width: "13rem", height: "18rem"
-                   },
+                   display: "flexbox",
+                   flex: 1,
                    overflow: "scroll",
                    borderRadius: "20px", padding: "1rem", backgroundColor: "rgb(34, 35, 38)"}}>
             {element}
